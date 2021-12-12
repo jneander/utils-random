@@ -1,0 +1,72 @@
+{
+  "name": "@jneander/utils-random",
+  "version": "0.0.0",
+  "description": "Utilities for Number, String, and Array Randomness",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "npm run build:js && npm run build:types",
+    "build:js": "babel src --out-dir dist --extensions '.ts'",
+    "build:types": "tsc -p tsconfig.json --emitDeclarationOnly",
+    "clean": "rimraf ./dist",
+    "format:fix": "prettier --write ./src",
+    "format:test": "prettier --check ./src",
+    "lint:fix": "eslint ./src --fix --ext .ts",
+    "lint:test": "eslint ./src --ext .ts",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
+    "test": "mocha",
+    "test:watch": "nodemon -e ts --exec 'npm run test'",
+    "types:test": "tsc --noEmit",
+    "types:test:watch": "tsc --noEmit --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jneander/utils-random"
+  },
+  "keywords": [
+    "random",
+    "generation"
+  ],
+  "author": "Jeremy Neander <jeremy.neander@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jneander/utils-random/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^17.0.0",
+    "@types/sinon": "^10.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "babel-plugin-add-import-extension": "^1.6.0",
+    "chai": "^4.3.4",
+    "chai-each": "^0.0.1",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "mocha": "^9.1.3",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "sinon": "^12.0.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@jneander/utils-arrays": "^1.0.0"
+  }
+}

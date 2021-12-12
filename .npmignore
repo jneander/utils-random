@@ -1,0 +1,21 @@
+# Development Directories
+.github
+.vscode
+src
+
+# Development Files
+*.spec.js
+.eslintrc.cjs
+.eslintignore
+.mocharc.json
+.prettierrc
+tsconfig.json
+.babelrc
+
+# Temporary Directories
+.babel-cache
+
+# Logs
+logs
+*.log
+npm-debug.log*
