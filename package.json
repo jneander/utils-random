@@ -1,6 +1,6 @@
 {
   "name": "@jneander/utils-random",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Utilities for Number, String, and Array Randomness",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
